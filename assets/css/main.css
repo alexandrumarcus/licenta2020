@@ -1,4 +1,180 @@
+html {
+  font-size: 10px; }
+
 body {
-  box-sizing: border-box;
+  background: black;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box;
+  overflow: auto;
+  transition: all 500ms; }
+
+::-webkit-scrollbar {
+  width: 0.4rem; }
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  padding: 5rem 0; }
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+  width: 10px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff; }
+
+header {
+  font-size: 4rem;
+  font-family: "Ubuntu", sans-serif;
+  color: #ffffff;
+  height: 100vh;
+  margin: 6.5rem 6.5rem -6.5rem 6.5rem; }
+  header .parallax-scene {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    right: 0;
+    height: 100%; }
+    header .parallax-scene div {
+      position: absolute; }
+      header .parallax-scene div.cloud {
+        bottom: 15rem;
+        background: url("../../../assets/images/cloud1.svg");
+        background-repeat: no-repeat;
+        height: 8rem;
+        width: 12rem; }
+
+@-webkit-keyframes animateCloud {
+  0% {
+    margin-left: 0; }
+  100% {
+    margin-left: 100%; } }
+
+@-moz-keyframes animateCloud {
+  0% {
+    margin-left: -1000px; }
+  100% {
+    margin-left: 100%; } }
+
+@keyframes animateCloud {
+  0% { }
+  100% {
+    left: 100vw; } }
+  header .header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between; }
+    header .header .logo {
+      text-transform: uppercase;
+      width: 14.4rem;
+      height: 9.4rem; }
+    header .header .menu {
+      cursor: pointer;
+      margin: auto 0;
+      z-index: 999; }
+      header .header .menu div {
+        width: 7rem;
+        height: 0.5rem;
+        background: url("../../assets/images/sprites.svg");
+        margin: 1.2rem;
+        transition: all 300ms cubic-bezier(0.61, 0.01, 0.42, 1);
+        background: white; }
+    header .header .color .bar1,
+    header .header .color .bar2 {
+      background: black; }
+    header .header .animate div.bar1 {
+      transition-delay: 100ms;
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px); }
+    header .header .animate div.bar2 {
+      transition-delay: 100ms;
+      -webkit-transform: rotate(45deg) translate(-6px, -3px);
+      transform: rotate(45deg) translate(-6px, -3px); }
+
+.navigation-component {
+  padding: 0.6rem; }
+  .navigation-component .nav-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    z-index: 0;
+    background: #ffffff;
+    float: right;
+    color: black;
+    opacity: 0;
+    transition: all 300ms cubic-bezier(0.3, 0.2, 0.5, 0.1);
+    overflow: hidden; }
+    .navigation-component .nav-wrapper ul {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      transition: all 300ms cubic-bezier(0.3, 0.2, 0.5, 0.1); }
+      .navigation-component .nav-wrapper ul li:nth-child(1) {
+        transition-delay: 0.2s; }
+      .navigation-component .nav-wrapper ul li:nth-child(2) {
+        transition-delay: 0.3s; }
+      .navigation-component .nav-wrapper ul li:nth-child(3) {
+        transition-delay: 0.4s; }
+      .navigation-component .nav-wrapper ul li:nth-child(4) {
+        transition-delay: 0.5s; }
+      .navigation-component .nav-wrapper ul li {
+        transform: translateX(-20px);
+        transition: all 0.2s ease;
+        display: block;
+        float: none;
+        text-align: right;
+        text-transform: uppercase;
+        margin: 3rem 0;
+        font-size: 3rem; }
+        .navigation-component .nav-wrapper ul li a {
+          text-decoration: none;
+          color: black; }
+          .navigation-component .nav-wrapper ul li a:after {
+            content: "";
+            width: 0px;
+            height: 1px;
+            display: block;
+            background: black;
+            transition: all 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+          .navigation-component .nav-wrapper ul li a:hover:after {
+            width: 100%; }
+    .navigation-component .nav-wrapper .ul-text {
+      right: 6.5rem; }
+  .navigation-component .opacity {
+    opacity: 1;
+    width: 25vw; }
+
+main {
+  position: absolute;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 118.9rem; }
+  main .main-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: "Ubuntu"; }
+    main .main-wrapper p {
+      font-size: 9rem;
+      font-family: "Ubuntu";
+      margin: 0;
+      line-height: 0;
+      font-weight: 700; }
+    main .main-wrapper h4 {
+      margin-top: 6rem;
+      font-size: 2.5rem;
+      font-family: "Ubuntu";
+      text-align: center;
+      font-weight: 200; }
+
+.second-page-component {
+  height: 100vh;
+  background: white; }

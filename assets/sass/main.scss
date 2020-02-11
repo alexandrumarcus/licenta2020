@@ -1,5 +1,7 @@
-body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@import "vendor/base";
+@import "vendor/body";
+@import "shared/header";
+@import "shared/footer";
+@import "components/navigation";
+@import "components/main";
+@import "components/second-page";

@@ -1,0 +1,28 @@
+main {
+  position: absolute;  
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 118.9rem;
+  .main-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: "Ubuntu";
+    p{
+      font-size: 9rem;
+      font-family: "Ubuntu";
+      margin: 0;
+      line-height: 0;
+      font-weight: 700;
+    }
+    h4{
+      margin-top: 6rem;
+      font-size: 2.5rem;
+      font-family: "Ubuntu";
+      text-align: center;
+      font-weight: 200;
+    }
+  }
+}
