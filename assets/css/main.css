@@ -1,154 +1,293 @@
-html {
-  font-size: 10px; }
+.hamburger span::before, .hamburger span::after {
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.hamburger.active span {
+  background-color: transparent; }
+
+.hamburger.active span::before {
+  transform: rotate(45deg); }
+
+.hamburger.active span::after {
+  transform: translateY(-10px) rotate(-45deg);
+  top: 10px; }
 
 body {
-  background: black;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  background: #2c2626;
+  z-index: 1;
   box-sizing: border-box;
-  overflow: auto;
-  transition: all 500ms; }
+  position: relative; }
 
-::-webkit-scrollbar {
-  width: 0.4rem; }
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  padding: 5rem 0; }
-
-::-webkit-scrollbar-thumb {
-  background: white;
-  border-radius: 10px;
-  width: 10px; }
-
-::-webkit-scrollbar-thumb:hover {
-  background: #ffffff; }
-
-header {
-  font-size: 4rem;
-  font-family: "Ubuntu", sans-serif;
-  color: #ffffff;
-  height: 100vh;
-  margin: 6.5rem 6.5rem -6.5rem 6.5rem; }
-  header .parallax-scene {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    right: 0;
-    height: 100%; }
-    header .parallax-scene div {
-      position: absolute; }
-      header .parallax-scene div.cloud {
-        bottom: 15rem;
-        background: url("../../../assets/images/cloud1.svg");
-        background-repeat: no-repeat;
-        height: 8rem;
-        width: 12rem; }
-
-@-webkit-keyframes animateCloud {
-  0% {
-    margin-left: 0; }
-  100% {
-    margin-left: 100%; } }
-
-@-moz-keyframes animateCloud {
-  0% {
-    margin-left: -1000px; }
-  100% {
-    margin-left: 100%; } }
-
-@keyframes animateCloud {
-  0% { }
-  100% {
-    left: 100vw; } }
-  header .header {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between; }
-    header .header .logo {
-      text-transform: uppercase;
-      width: 14.4rem;
-      height: 9.4rem; }
-    header .header .menu {
-      cursor: pointer;
-      margin: auto 0;
-      z-index: 999; }
-      header .header .menu div {
-        width: 7rem;
-        height: 0.5rem;
-        background: url("../../assets/images/sprites.svg");
-        margin: 1.2rem;
-        transition: all 300ms cubic-bezier(0.61, 0.01, 0.42, 1);
-        background: white; }
-    header .header .color .bar1,
-    header .header .color .bar2 {
-      background: black; }
-    header .header .animate div.bar1 {
-      transition-delay: 100ms;
-      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-      transform: rotate(-45deg) translate(-9px, 6px); }
-    header .header .animate div.bar2 {
-      transition-delay: 100ms;
-      -webkit-transform: rotate(45deg) translate(-6px, -3px);
-      transform: rotate(45deg) translate(-6px, -3px); }
+.header-component {
+  width: 6rem;
+  height: 100%;
+  background: black;
+  position: fixed;
+  z-index: 10; }
+  .header-component .navigation-structure .hamburger {
+    margin-top: 2rem;
+    z-index: 100;
+    position: relative; }
+  .header-component .navigation-structure .hamburger .line {
+    width: 2.3rem;
+    height: 0.1rem;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 0.9rem auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    position: relative; }
+  .header-component .navigation-structure #hamburger.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); }
+  .header-component .navigation-structure #hamburger.active .line:nth-child(2) {
+    transform: translateY(-8px) rotate(-45deg); }
+  .header-component .navigation-structure .hamburger:hover {
+    cursor: pointer; }
 
 .navigation-component {
-  padding: 0.6rem; }
-  .navigation-component .nav-wrapper {
+  display: block;
+  position: relative;
+  z-index: 5; }
+  .navigation-component .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60%;
+    background: black;
+    transform: translate(-100%, 0);
+    z-index: 5;
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .navigation-component .menu .container {
+      display: flex;
+      position: relative;
+      max-width: 100%;
+      height: 100%;
+      margin-top: 6rem;
+      margin-left: 10rem;
+      color: white;
+      flex-direction: column; }
+      .navigation-component .menu .container .links {
+        position: relative;
+        left: -500px;
+        transition: all 1.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        list-style-type: none; }
+        .navigation-component .menu .container .links li {
+          padding: 0.8rem 0; }
+          .navigation-component .menu .container .links li a {
+            font-size: 4rem;
+            font-weight: 400;
+            font-style: normal;
+            font-family: quicksand;
+            text-decoration: none;
+            color: white;
+            position: relative; }
+            .navigation-component .menu .container .links li a::before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 2px;
+              bottom: 0;
+              left: 0;
+              background-color: white;
+              visibility: hidden;
+              -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+              -webkit-transition: all 0.3s ease-in-out 0s;
+              transition: all 0.3s ease-in-out 0s; }
+            .navigation-component .menu .container .links li a:hover {
+              color: white; }
+              .navigation-component .menu .container .links li a:hover::before {
+                visibility: visible;
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1); }
+      .navigation-component .menu .container .footer-wrapper {
+        position: relative;
+        display: flex;
+        margin-top: 15rem;
+        margin-left: 2.5rem;
+        font-weight: 300;
+        font-style: normal;
+        font-family: quicksand; }
+  .navigation-component .active-menu {
+    transform: translate(0, 0);
+    transition: all 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+    .navigation-component .active-menu .container .links {
+      transition: all 1.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      left: 0; }
+  .navigation-component .account {
     position: fixed;
     top: 0;
     right: 0;
     height: 100%;
-    width: 0;
-    z-index: 0;
-    background: #ffffff;
-    float: right;
-    color: black;
-    opacity: 0;
-    transition: all 300ms cubic-bezier(0.3, 0.2, 0.5, 0.1);
-    overflow: hidden; }
-    .navigation-component .nav-wrapper ul {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 0;
-      transition: all 300ms cubic-bezier(0.3, 0.2, 0.5, 0.1); }
-      .navigation-component .nav-wrapper ul li:nth-child(1) {
-        transition-delay: 0.2s; }
-      .navigation-component .nav-wrapper ul li:nth-child(2) {
-        transition-delay: 0.3s; }
-      .navigation-component .nav-wrapper ul li:nth-child(3) {
-        transition-delay: 0.4s; }
-      .navigation-component .nav-wrapper ul li:nth-child(4) {
-        transition-delay: 0.5s; }
-      .navigation-component .nav-wrapper ul li {
-        transform: translateX(-20px);
-        transition: all 0.2s ease;
-        display: block;
-        float: none;
-        text-align: right;
-        text-transform: uppercase;
-        margin: 3rem 0;
-        font-size: 3rem; }
-        .navigation-component .nav-wrapper ul li a {
+    width: 40%;
+    background-color: #1a1a1a;
+    transform: translate(100%, 0);
+    z-index: 5;
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .navigation-component .account .container {
+      display: flex;
+      position: relative;
+      max-width: 100%;
+      height: 100%;
+      justify-content: center;
+      flex-direction: column;
+      margin: auto 3rem 0 9rem; }
+      .navigation-component .account .container .header-wrapper ul {
+        padding: 0;
+        margin: 0 0 3rem; }
+        .navigation-component .account .container .header-wrapper ul li {
+          color: white;
+          font-weight: 500;
+          font-style: normal;
+          font-family: quicksand;
+          font-size: 2.3rem;
+          display: inline;
+          list-style-type: none;
+          color: #888888;
+          margin-right: 1rem;
+          cursor: pointer;
+          transition: 0.4s all ease-in-out; }
+          .navigation-component .account .container .header-wrapper ul li.active {
+            color: white;
+            transition: 0.4s all ease-in-out;
+            cursor: auto; }
+      .navigation-component .account .container .sign-up {
+        text-align: justify; }
+        .navigation-component .account .container .sign-up .input-container {
+          width: 27rem;
+          position: relative; }
+          .navigation-component .account .container .sign-up .input-container input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: white;
+            border-bottom: 0.1rem solid #888888;
+            border-radius: 0;
+            padding: 1rem 0;
+            font-weight: 400;
+            font-style: normal;
+            font-family: quicksand;
+            width: 100%;
+            font-size: 1.2rem;
+            margin-bottom: 3rem; }
+          .navigation-component .account .container .sign-up .input-container input::placeholder {
+            color: #888888;
+            font-weight: 300;
+            font-style: normal;
+            font-family: quicksand; }
+          .navigation-component .account .container .sign-up .input-container .fa-user {
+            position: absolute;
+            z-index: 100;
+            right: 0;
+            top: 1rem;
+            color: #aa8559; }
+        .navigation-component .account .container .sign-up .submit {
+          content: "";
+          background-color: #f2f2f2;
+          color: #333333;
+          transition: all 0.4s ease-in-out;
+          padding: 0.7rem 2.5rem;
+          display: inline-block;
+          font-size: 1.1rem;
           text-decoration: none;
-          color: black; }
-          .navigation-component .nav-wrapper ul li a:after {
-            content: "";
-            width: 0px;
-            height: 1px;
-            display: block;
-            background: black;
-            transition: all 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045); }
-          .navigation-component .nav-wrapper ul li a:hover:after {
-            width: 100%; }
-    .navigation-component .nav-wrapper .ul-text {
-      right: 6.5rem; }
-  .navigation-component .opacity {
-    opacity: 1;
-    width: 25vw; }
+          line-height: 1.2;
+          text-transform: uppercase;
+          user-select: none;
+          border: 1px solid #ffffff;
+          letter-spacing: 0.35em;
+          font-family: quicksand;
+          font-weight: 400;
+          font-style: normal; }
+          .navigation-component .account .container .sign-up .submit:hover {
+            cursor: pointer;
+            background: #aa8559;
+            color: #f2f2f2;
+            border: 1px solid #aa8559; }
+      .navigation-component .account .container .sign-in {
+        display: none;
+        text-align: justify; }
+        .navigation-component .account .container .sign-in .input-container {
+          width: 27rem;
+          position: relative; }
+          .navigation-component .account .container .sign-in .input-container input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: white;
+            border-bottom: 0.1rem solid #888888;
+            border-radius: 0;
+            padding: 1rem 0;
+            font-weight: 400;
+            font-style: normal;
+            font-family: quicksand;
+            width: 100%;
+            font-size: 1.2rem;
+            margin-bottom: 3rem; }
+          .navigation-component .account .container .sign-in .input-container input::placeholder {
+            color: #888888;
+            font-weight: 300;
+            font-style: normal;
+            font-family: quicksand; }
+          .navigation-component .account .container .sign-in .input-container .fa-user {
+            position: absolute;
+            z-index: 100;
+            right: 0;
+            top: 1rem;
+            color: #aa8559; }
+        .navigation-component .account .container .sign-in .submit {
+          content: "";
+          background-color: #f2f2f2;
+          color: #333333;
+          transition: all 0.4s ease-in-out;
+          padding: 0.7rem 2.5rem;
+          display: inline-block;
+          font-size: 1.1rem;
+          text-decoration: none;
+          line-height: 1.2;
+          text-transform: uppercase;
+          user-select: none;
+          border: 1px solid #ffffff;
+          letter-spacing: 0.35em;
+          font-family: quicksand;
+          font-weight: 400;
+          font-style: normal; }
+          .navigation-component .account .container .sign-in .submit:hover {
+            cursor: pointer;
+            background: #aa8559;
+            color: #f2f2f2;
+            border: 1px solid #aa8559; }
+      .navigation-component .account .container .footer-wrapper {
+        position: relative;
+        color: white;
+        margin-top: 4rem; }
+        .navigation-component .account .container .footer-wrapper .submit {
+          content: "";
+          background-color: transparent;
+          color: #aa8559;
+          transition: all 0.4s ease-in-out;
+          padding: 0.7rem 2.5rem;
+          display: inline-block;
+          font-size: 1.1rem;
+          text-decoration: none;
+          line-height: 1.2;
+          text-transform: uppercase;
+          user-select: none;
+          border: 1px solid #aa8559;
+          letter-spacing: 0.35em;
+          font-family: quicksand;
+          font-weight: 400;
+          font-style: normal; }
+          .navigation-component .account .container .footer-wrapper .submit:hover {
+            cursor: pointer;
+            background: white;
+            color: #aa8559;
+            border: 1px solid white; }
+  .navigation-component .active-account {
+    transform: translate(0, 0);
+    transition: all 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045); }
 
 main {
   position: absolute;
@@ -156,13 +295,13 @@ main {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 118.9rem; }
+  width: 125rem; }
   main .main-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     font-family: "Ubuntu"; }
-    main .main-wrapper p {
+    main .main-wrapper span {
       font-size: 9rem;
       font-family: "Ubuntu";
       margin: 0;

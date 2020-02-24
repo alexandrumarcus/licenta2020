@@ -1,98 +1,37 @@
-header {
-  font-size: 4rem;
-  font-family: "Ubuntu", sans-serif;
-  color: $white;
-  height: 100vh;
-  margin: 6.5rem 6.5rem -6.5rem 6.5rem;
-  .parallax-scene {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    right: 0;
-    height: 100%;
-    div {
-      position: absolute;
-      &.cloud {
-        bottom: 15rem;
-        background: url("../../../assets/images/cloud1.svg");
-        background-repeat: no-repeat;
-        height: 8rem;
-        width: 12rem;
-      }
+.header-component {
+  width: 6rem;
+  height: 100%;
+  background: black;
+  position: fixed;
+  z-index: 10;
+  .navigation-structure {
+    .hamburger {
+			margin-top: 2rem;
+			z-index: 100;
+			position: relative;
     }
-    @-webkit-keyframes animateCloud {
-      0% {
-        margin-left: 0;
-      }
-      100% {
-        margin-left: 100%;
-      }
+    .hamburger .line {
+      width: 2.3rem;
+      height: 0.1rem;
+      background-color: #ecf0f1;
+      display: block;
+      margin: 0.9rem auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+			transition: all .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+			position: relative;
     }
 
-    @-moz-keyframes animateCloud {
-      0% {
-        margin-left: -1000px;
-      }
-      100% {
-        margin-left: 100%;
-      }
+    #hamburger.active .line:nth-child(1) {
+			transform: translateY(8px) rotate(45deg);
+		}
+		
+    #hamburger.active .line:nth-child(2) {
+			transform: translateY(-8px) rotate(-45deg);
     }
 
-    @keyframes animateCloud {
-      0% {
-      }
-      100% {
-        left: 100vw;
-      }
-    }
-    .c1 {
-      // -webkit-animation: animateCloud 5s linear infinite;
-      // -moz-animation: animateCloud 5s linear infinite;
-      // animation: animateCloud 5s linear infinite;
-    }
-  }
-
-  .header {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    .logo {
-      text-transform: uppercase;
-      width: 14.4rem;
-      height: 9.4rem;
-    }
-    .menu {
+    .hamburger:hover {
       cursor: pointer;
-      margin: auto 0;
-      z-index: 999;
-      div {
-        width: 7rem;
-        height: 0.5rem;
-        background: url("../../assets/images/sprites.svg");
-        margin: 1.2rem;
-        transition: all 300ms cubic-bezier(0.61, 0.01, 0.42, 1);
-        background: white;
-      }
-    }
-    .color {
-      .bar1,
-      .bar2 {
-        background: black;
-      }
-    }
-    .animate {
-      div.bar1 {
-        transition-delay: 100ms;
-        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-        transform: rotate(-45deg) translate(-9px, 6px);
-      }
-      div.bar2 {
-        transition-delay: 100ms;
-        -webkit-transform: rotate(45deg) translate(-6px, -3px);
-        transform: rotate(45deg) translate(-6px, -3px);
-      }
     }
   }
 }

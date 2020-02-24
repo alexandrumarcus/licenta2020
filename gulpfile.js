@@ -22,3 +22,4 @@ function watch() {
 }
 exports.style = style;
 exports.watch = watch;
+exports.default = watch;
