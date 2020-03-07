@@ -1,6 +1,8 @@
 main {
   .service-area {
-    padding: 15rem;
+    min-height: 100vh;
+    max-width: 100vw;
+    padding-top: 15rem;
     h2 {
       position: relative;
       padding-bottom: 20px;
@@ -14,6 +16,39 @@ main {
         height: 0.2rem;
         bottom: 0;
         background: black;
+      }
+    }
+    .flex-first {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      align-content: center;
+      justify-content: center;
+      .left {
+        height: 20rem;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+      }
+      .right {
+        height: 20rem;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        text-align: right;
+        h1 {
+          font-weight: 800 !important;
+          font-size: 5.7rem !important;
+        }
+        .description {
+          margin-top: 1rem;
+          display: block;
+          h3 {
+            font-family: "PT Mono";
+            font-weight: 200;
+            line-height: 2;
+          }
+        }
       }
     }
   }

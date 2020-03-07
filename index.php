@@ -84,28 +84,17 @@
             </section>
           </div>
           <div class="row align-children">
-            <div class="col-md-7 col-sm-6 text-center mb-xs-24">
-              <img
-                class="img-responsive"
-                alt="SEO Friendly"
-                src="https://colorlib.com/shapely/wp-content/uploads/sites/12/2016/03/macbook-preview-flexible.png"
-              />
-            </div>
-            <div class="col-md-4 col-md-offset-1 col-sm-5 col-sm-offset-1">
-              <div class="">
-                <h3>SEO Friendly</h3>
-                <div class="mb32">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    pulvinar luctus sem, eget porta orci. Maecenas molestie dui
-                    id diam feugiat, eu tincidunt mauris aliquam. Duis commodo
-                    vitae ligula et interdum. Maecenas faucibus mattis
-                    imperdiet. In rhoncus ac ligula id ultricies.
-                  </p>
-                </div>
-                <a class="btn btn-lg btn-filled" href="#">Read more</a>
+           <div class="flex-first">
+             <div class="left">
+               adsada
+             </div>
+             <div class="right">
+              <h1>We made this application</h1>
+              <div class="description">
+                <h3>to show you how easily it can be to solve problems, so take a step with us. don't be so shy.</h3>
               </div>
-            </div>
+             </div>
+           </div>
           </div>
         </div>
       </div>
