@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+  text-rendering: optimizeLegibility;
+}
+html {
+  width: 100%;
+  font-size: 10px;
+  border-collapse: collapse;
+}
+body{
+  user-select: none;
+  font-family: 'Manrope3-Regular';
+}

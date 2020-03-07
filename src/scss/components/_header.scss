@@ -1,0 +1,17 @@
+.header-component {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  font-size: 5rem;
+  background: black;
+  color: white;
+
+  .header-content{
+    width: 100%;
+    position: relative;
+    top: 40%;
+    display: block;
+    padding: 3rem 9rem;
+    font-size: 6rem;
+  }
+}

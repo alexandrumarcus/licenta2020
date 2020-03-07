@@ -1,0 +1,52 @@
+.navigation-component {
+  position: fixed;
+  width: 100vw;
+  height: 15rem;
+  padding: 3rem 9rem;
+  display: flex;
+  justify-content: space-between;
+
+  .hamburger {
+    position: relative;
+    display: block;
+    right: 0;
+    height: 2.5rem;
+    transform: translateY(-50%);
+    top: 50%;
+
+    .one {
+      width: 5rem;
+    }
+
+    .two {
+      width: 3rem;
+    }
+
+    .one,
+    .two {
+      height: 0.3rem;
+      background: #fff;
+      margin: 0.5rem 0;
+      transition: all .333s ease-in-out;
+    }
+
+    &:hover {
+      cursor: pointer;
+      .one,
+      .two {
+        width: 5rem;
+      }
+    }
+  }
+  .active {
+    .one {
+      transform: rotate(45deg);
+      transform: translateY(6px) rotate(-135deg);
+    }
+    .two {
+      transform: translateY(-1px) rotate(135deg);
+      position: relative;
+      width: 5rem;
+    }
+  }
+}
