@@ -1,0 +1,18 @@
+.boxed-btn{
+  margin-top: 4rem;
+  display: inline-block;
+  background: transparent;
+  border: .1rem solid rgb(255, 244, 244);
+  padding: 1rem 2.3rem;
+  color: white;
+  font-family: "PT Mono";
+  transition: 0.333s all ease-in-out;
+  font-weight: 100;
+  font-size: 1.4rem;
+
+  &:hover {
+    background: white;
+    cursor: pointer;
+    color: black;
+  }
+}

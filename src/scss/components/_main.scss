@@ -1,0 +1,20 @@
+main {
+  .service-area {
+    padding: 15rem;
+    h2 {
+      position: relative;
+      padding-bottom: 20px;
+      display: inline-block;
+      &::after {
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        content: "";
+        width: 10rem;
+        height: 0.2rem;
+        bottom: 0;
+        background: black;
+      }
+    }
+  }
+}

@@ -1,13 +1,80 @@
-/* font converted using font-converter.net. thank you! */
 @font-face {
-  font-family: "Manrope3-Regular";
-  src: url("./../../assets/fonts/Manrope3Regular400.eot");
-  src: url("./../../assets/fonts/Manrope3Regular400.eot?#iefix") format("embedded-opentype"),
-  url("./../../assets/fonts/Manrope3Regular400.otf") format("opentype"),
-  url("./../../assets/fonts/Manrope3Regular400.svg") format("svg"),
-  url("./../../assets/fonts/Manrope3Regular400.ttf") format("truetype"),
-  url("./../../assets/fonts/Manrope3Regular400.woff") format("woff"),
-  url("./../../assets/fonts/Manrope3Regular400.woff2") format("woff2");
+  font-family: "PT Mono";
+  src: local("PT Mono"), local("PTMono-Regular"),
+    url("../assets/fonts/hinted-PTMono-Regular.ttf") format("truetype"),
+    url("../assets/fonts/hinted-PTMono-Regular.svg#PTMono-Regular") format("svg");
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Mono";
+  src: local("PT Mono"), local("PTMono-Regular"),
+    url("../assets/fonts/hinted-PTMono-Regular.ttf") format("truetype"),
+    url("../assets/fonts/hinted-PTMono-Regular.svg#PTMono-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope3";
+  src: local("Manrope3 Thin"), local("Manrope3-Thin"),
+    url("../assets/fonts/hinted-Manrope3-Thin.ttf") format("truetype"),
+    url("../assets/fonts/hinted-Manrope3-Thin.svg#Manrope3-Thin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope3";
+  src: local("Manrope3 Light"), local("Manrope3-Light"),
+    url("../assets/fonts/hinted-Manrope3-Light.ttf") format("truetype"),
+    url("../assets/fonts/hinted-Manrope3-Light.svg#Manrope3-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope3";
+  src: local("Manrope3 Regular"), local("Manrope3-Regular"),
+    url("../assets/fonts/hinted-Manrope3-Regular.ttf") format("truetype"),
+    url("../assets/fonts/hinted-Manrope3-Regular.svg#Manrope3-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope3";
+  src: local("Manrope3 Semibold"), local("Manrope3-Semibold"),
+    url("../assets/fonts/hinted-Manrope3-Semibold.ttf") format("truetype"),
+    url("../assets/fonts/hinted-Manrope3-Semibold.svg#Manrope3-Semibold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope3";
+  src: local("Manrope3 Medium"), local("Manrope3-Medium"),
+    url("../assets/fonts/hinted-Manrope3-Medium.ttf") format("truetype"),
+    url("../assets/fonts/hinted-Manrope3-Medium.svg#Manrope3-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope3";
+  src: local("Manrope3 ExtraBold"), local("Manrope3-ExtraBold"),
+    url("../assets/fonts/hinted-Manrope3-ExtraBold.ttf") format("truetype"),
+    url("../assets/fonts/hinted-Manrope3-ExtraBold.svg#Manrope3-ExtraBold") format("svg");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope3";
+  src: local("Manrope3 Bold"), local("Manrope3-Bold"),
+    url("../assets/fonts/hinted-Manrope3-Bold.ttf") format("truetype"),
+    url("../assets/fonts/hinted-Manrope3-Bold.svg#Manrope3-Bold") format("svg");
+  font-weight: bold;
   font-style: normal;
 }

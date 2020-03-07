@@ -90,7 +90,7 @@ function copyJsVendors() {
 
 /* JS vendors bundled */
 function vendorsBundle() {
-	return src('src/js/vendors/**/*.js', del(paths.assets + "assets/js/vendors/**"))
+	return src(['src/js/vendors/**/*.js','!src/js/vendors/jQuery/*.js'], del(paths.assets + "assets/js/vendors/**"))
 		.pipe(sourcemaps.init())
 		.pipe(concat("vendors-bundle.js"))
 		.pipe(uglify())

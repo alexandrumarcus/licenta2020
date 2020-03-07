@@ -1,17 +1,19 @@
 .header-component {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  font-size: 5rem;
-  background: black;
-  color: white;
-
-  .header-content{
-    width: 100%;
-    position: relative;
-    top: 40%;
-    display: block;
-    padding: 3rem 9rem;
-    font-size: 6rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  .title{
+    a{
+      font-size: 4rem;
+      color: white;
+      font-family: "Manrope3";
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
   }
 }

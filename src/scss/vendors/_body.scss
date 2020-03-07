@@ -10,8 +10,23 @@ html {
   width: 100%;
   font-size: 10px;
   border-collapse: collapse;
+  scroll-behavior: smooth;
 }
-body{
+body {
   user-select: none;
-  font-family: 'Manrope3-Regular';
+  font-family: "Manrope3";
+}
+.img {
+  max-width: 100%;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+a,
+.button {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
